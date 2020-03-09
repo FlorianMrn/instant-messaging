@@ -13,7 +13,7 @@ const Communication = () => (
                 </div>
                 <div className="communication-theirMess"> 
                         <div className="communication-theirMess-title">7/3 - Michel</div>
-                        <p className="communication-theirMess-mess">Ca va</p>
+                        <p className="communication-theirMess-mess">Ca va sfsfsfsfsfsfsfsfssfddqdqdqdqdqddqdqddqdqdqsdqdqdqdqdqdsddsssfsfsfsfsfsfsfsfsfsfsfsfsfsfsfsfsfsfsfsfsfsfsffsffsfsfsfsfssfsffsdsdsdsdssdsdsdsdsdsdsdssdqddsdsdsdsdsdssds</p>
                 </div>
         </div>
 );
