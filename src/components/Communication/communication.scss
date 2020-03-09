@@ -1,0 +1,39 @@
+.communication {
+    box-sizing: border-box;
+    display: inline-block   ;
+    width: 100%;
+    height: 90%;
+    padding: 30px 10px 10px;
+
+        &-myMess {
+            float: right;
+            clear: both;
+            
+                &-title {
+                    text-align: right;
+                    font-size: .7rem;
+                }
+
+                &-mess {
+                    background-color: #53d769;
+                    border-radius: 5px;
+                    padding: 7px;
+                }
+        }
+
+        &-theirMess {
+            float: left;
+            clear: both;
+
+                &-title {
+                    text-align: left;
+                    font-size: .7rem;
+                }
+
+                &-mess {
+                    background-color: #147efb;
+                    border-radius: 5px;
+                    padding: 7px;
+                }
+        }
+}
