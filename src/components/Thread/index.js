@@ -9,7 +9,7 @@ import { FiArrowUp } from "react-icons/fi";
 const Thread = () => (
   <div className="thread">
     <div className="thread-texting">
-        <input type="text" name="name" placeholder="Message texte"/>
+        <input type="text" name="message" placeholder="Message"/>
         <div className="thread-texting-send"><FiArrowUp/></div>
     </div>
   </div>
