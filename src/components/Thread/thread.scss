@@ -3,9 +3,9 @@
     max-width : calc(1000px - 14px);
     margin: auto;
     box-shadow: 5px 10px 12px 0px grey;
-    height: 90vh;
+    height: 93vh;
     border: grey 1px solid;
-    border-radius: 3px;
+    border-radius: 5px;
 
         &-texting {
             position: absolute;
@@ -43,7 +43,7 @@
                     color: grey;
 
                         &:hover {
-                            color: 	#000080;
+                            color: 	#38A3D6;
                         }
                 }
         }
