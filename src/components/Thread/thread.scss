@@ -1,0 +1,51 @@
+.thread {
+    position: relative;
+    max-width : calc(1000px - 14px);
+    margin: auto;
+    box-shadow: 5px 10px 12px 0px grey;
+    height: 90vh;
+    border: grey 1px solid;
+    border-radius: 3px;
+
+        &-texting {
+            position: absolute;
+            bottom: 0;
+            padding: 5px;
+            width: 100%;
+            margin: auto;
+            height: 8%;
+            border: 1px solid grey;
+            display: flex;
+            flex-direction: center;
+            align-items: center;
+            cursor: pointer;
+
+                & input {
+                    width: 90%;
+                    height: 100%;
+                    box-sizing: border-box;
+                    border: 1px solid grey;
+                    border-radius: 5px;
+                    padding: 5px;
+                    color: black;
+                    background-color: #DCDCDC;
+
+                        &::placeholder {
+                            color: grey;
+                        }
+                }
+
+                &-send {
+                    position: absolute;
+                    font-size: 1.5rem;
+                    right: 0;
+                    margin-right: 5px;
+                    color: grey;
+
+                        &:hover {
+                            color: 	#4169E1;
+                        }
+                }
+        }
+
+}
