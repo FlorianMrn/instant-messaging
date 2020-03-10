@@ -4,13 +4,13 @@ import messagesData from "src/data/messages.js";
 // == Initial State
 const initialState = {
   messagesData,
-  message : '',
+  messageValue : '',
   pseudo : ''
 };
 
 // == Types
 const GET_PSEUDO = 'GET_PSEUDO';
-const GET_MESSAGE = 'GET_MESSAGE';
+const GET_MESSAGE_VALUE = 'GET_MESSAGE_VALUE';
 
 // == Reducer
 const reducer = (state = initialState, action = {}) => {
@@ -20,10 +20,10 @@ const reducer = (state = initialState, action = {}) => {
         ...state,
         pseudo: action.pseudo,
       };
-    case GET_MESSAGE:
+    case GET_MESSAGE_VALUE:
       return {
         ...state,
-        message: action.message,
+        messageValue: action.message,
       }
     default:
       return state;
@@ -36,8 +36,8 @@ export const getPseudo = (pseudo) => ({
   pseudo,
 });
 
-export const getMessage = (message) => ({
-  type: GET_MESSAGE,
+export const getMessageValue = (message) => ({
+  type: GET_MESSAGE_VALUE,
   message,
 });
 

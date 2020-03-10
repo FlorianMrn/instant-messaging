@@ -5,7 +5,10 @@ import React from 'react';
 import './communication.scss';
 
 // == Composant
-const Communication = () => (
+const Communication = () => {
+
+
+        return (
         <div className="communication">
                 <div className="communication-myMess"> 
                         <div className="communication-myMess-title">Jean</div>
@@ -16,7 +19,7 @@ const Communication = () => (
                         <p className="communication-theirMess-mess">Ca va sfsfsfsfsfsfsfsfssfddqdqdqdqdqddqdqddqdqdqsdqdqdqdqdqdsddsssfsfsfsfsfsfsfsfsfsfsfsfsfsfsfsfsfsfsfsfsfsfsffsffsfsfsfsfssfsffsdsdsdsdssdsdsdsdsdsdsdssdqddsdsdsdsdsdssds</p>
                 </div>
         </div>
-);
+)};
 
 // == Export
 export default Communication;

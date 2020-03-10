@@ -2,10 +2,10 @@
 import { connect } from 'react-redux';
 
 // == Import : local
-import Thread from 'src/components/Thread';
+import Communication from 'src/components/Communication';
 
 // Action Creators
-import { getMessageValue } from 'src/store/reducer';
+//import { getMessage} from 'src/store/reducer';
 
 /* === State (données) ===
  * - mapStateToProps retroune un objet de props pour le composant de présentation
@@ -15,7 +15,7 @@ import { getMessageValue } from 'src/store/reducer';
  * Pas de data à transmettre ? const mapStateToProps = null;
  */
 const mapStateToProps = (state, ownProps) => ({
-  messageValue: state.messageValue,
+  messages: state.messagesData,
 });
 
 /* === Actions ===
@@ -25,17 +25,12 @@ const mapStateToProps = (state, ownProps) => ({
  *  - ownProps : les props passées au container
  * Pas de disptach à transmettre ? const mapDispatchToProps = {};
  */
-const mapDispatchToProps = (dispatch, ownProps) => ({
-  getMessageValue: (message) => {
-    dispatch(getMessageValue(message));
-  },
-});
-
+const mapDispatchToProps = {};
 // Container
-const MessageContainer = connect(
+const CommunicationContainer = connect(
   mapStateToProps,
   mapDispatchToProps,
-)(Thread);
+)(Communication);
 
 // == Export
-export default MessageContainer;
+export default CommunicationContainer;
