@@ -25,7 +25,7 @@
                     height: 100%;
                     box-sizing: border-box;
                     border: 1px solid grey;
-                    border-radius: 5px;
+                    border-radius: 15px;
                     padding: 5px;
                     color: black;
                     background-color: #DCDCDC;
@@ -41,9 +41,12 @@
                     right: 0;
                     margin-right: 5px;
                     color: grey;
+                    background-color: lightgrey;
+                    border: solid 1px grey;
+                    border-radius: 15px;
 
                         &:hover {
-                            color: 	#53d769;
+                            color: 	#147efb;
                         }
                 }
         }
