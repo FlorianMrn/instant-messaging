@@ -5,9 +5,9 @@ import React from 'react';
 import './pseudo.scss';
 
 // == Composant
-const Pseudo = () => (
+const Pseudo = (props) => (
         <div className="pseudo">
-            <input type="text" name="pseudo" placeholder="Pseudo"/>
+            <input type="text" name="pseudo" placeholder="Pseudo" value={props.pseudo} onChange={() => props.getPseudo(event.target.value)}/>
         </div>
 );
 

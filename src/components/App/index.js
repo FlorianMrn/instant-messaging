@@ -4,7 +4,7 @@ import React from 'react';
 // == Import : local
 import './app.scss';
 import Thread from "src/components/Thread";
-import Pseudo from "src/components/Pseudo";
+import Pseudo from "src/containers/PseudoContainer.js";
 
 // == Composant
 const App = () => (

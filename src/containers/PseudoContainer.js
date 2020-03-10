@@ -2,10 +2,10 @@
 import { connect } from 'react-redux';
 
 // == Import : local
-import Example from 'src/components/Example';
+import Pseudo from 'src/components/Pseudo';
 
 // Action Creators
-import { doSomething } from 'src/store/reducer';
+import { getPseudo } from 'src/store/reducer';
 
 /* === State (données) ===
  * - mapStateToProps retroune un objet de props pour le composant de présentation
@@ -15,7 +15,7 @@ import { doSomething } from 'src/store/reducer';
  * Pas de data à transmettre ? const mapStateToProps = null;
  */
 const mapStateToProps = (state, ownProps) => ({
-  message: state.message,
+  pseudo: state.pseudo,
 });
 
 /* === Actions ===
@@ -26,23 +26,16 @@ const mapStateToProps = (state, ownProps) => ({
  * Pas de disptach à transmettre ? const mapDispatchToProps = {};
  */
 const mapDispatchToProps = (dispatch, ownProps) => ({
-  doSomething: () => {
-    dispatch(doSomething('Coucou'));
+  getPseudo: (pseudo) => {
+    dispatch(getPseudo(pseudo));
   },
 });
 
 // Container
-const ExampleContainer = connect(
+const PseudoContainer = connect(
   mapStateToProps,
   mapDispatchToProps,
-)(Example);
+)(Pseudo);
 
 // == Export
-export default ExampleContainer;
-
-/* = export à la volée
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps,
-)(Example);
-*/
+export default PseudoContainer;
