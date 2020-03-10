@@ -3,7 +3,7 @@ import React from 'react';
 
 // == Import : local
 import './app.scss';
-import Thread from "src/components/Thread";
+import Thread from "src/containers/MessageContainer.js";
 import Pseudo from "src/containers/PseudoContainer.js";
 
 // == Composant
