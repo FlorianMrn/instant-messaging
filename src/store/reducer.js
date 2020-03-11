@@ -69,6 +69,10 @@ export const receiveMessage = (message) => ({
   message,
 });
 
+export const addMessage = () => ({
+  type: ADD_MESSAGE,
+})
+
 
 
 

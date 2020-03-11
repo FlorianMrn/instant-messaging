@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 import Thread from 'src/components/Thread';
 
 // Action Creators
-import { getMessageValue, receiveMessage  } from 'src/store/reducer';
+import { getMessageValue, receiveMessage, addMessage  } from 'src/store/reducer';
 
 /* === State (données) ===
  * - mapStateToProps retroune un objet de props pour le composant de présentation
@@ -33,7 +33,11 @@ const mapDispatchToProps = (dispatch, ownProps) => ({
   receiveMessage: (message) => {
     const action = receiveMessage(message);
     dispatch(action);
-  }
+  },
+  sendMessage: () => {
+    const action = addMessage();
+    dispatch(action);
+  },
 });
 
 // Container

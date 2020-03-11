@@ -11,15 +11,11 @@ import { FiArrowUp } from "react-icons/fi";
 // == Composant
 const Thread = (props) => {
 
-  const {messageValue, getMessageValue, pseudo, receiveMessage } = props;
+  const {messageValue, getMessageValue, pseudo, sendMessage } = props;
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    const newMessage = {
-            text: messageValue,
-            pseudo: pseudo,
-    };
-    receiveMessage(newMessage);
+    sendMessage();
   }
 
   return (
