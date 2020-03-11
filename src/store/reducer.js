@@ -2,15 +2,16 @@
 import messagesData from "src/data/messages.js";
 
 // == Initial State
-const initialState = {
+export const initialState = {
   messagesData,
   messageValue : '',
   pseudo : ''
 };
 
 // == Types
-const GET_PSEUDO = 'GET_PSEUDO';
-const GET_MESSAGE_VALUE = 'GET_MESSAGE_VALUE';
+export const GET_PSEUDO = 'GET_PSEUDO';
+export const GET_MESSAGE_VALUE = 'GET_MESSAGE_VALUE';
+export const WEBSOCKET_CONNECT = 'WEBSOCKET_CONNECT';
 
 // == Reducer
 const reducer = (state = initialState, action = {}) => {
@@ -39,6 +40,10 @@ export const getPseudo = (pseudo) => ({
 export const getMessageValue = (message) => ({
   type: GET_MESSAGE_VALUE,
   message,
+});
+
+export const websocketConnect = () => ({
+  type: WEBSOCKET_CONNECT,
 });
 
 
