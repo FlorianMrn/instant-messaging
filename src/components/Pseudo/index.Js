@@ -16,7 +16,7 @@ const Pseudo = (props) => (
             value={props.pseudo} 
             onChange={() => props.getPseudo(event.target.value)}
             />
-            <label for="pseudo">Pseudo</label>
+            <label htmlFor="pseudo">Pseudo</label>
         </div>
 );
 

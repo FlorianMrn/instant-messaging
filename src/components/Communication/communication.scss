@@ -10,6 +10,7 @@
             float: right;
             clear: both;
             margin-bottom: 20px;
+            transition: all 0.1s;
             
                 &-title {
                     text-align: right;
@@ -55,6 +56,7 @@
             float: left;
             clear: both;
             margin-bottom: 20px;
+            transition: all 0.1s;
                 
                 &-title {
                     text-align: left;
