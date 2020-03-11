@@ -5,20 +5,31 @@ import React from 'react';
 import './pseudo.scss';
 
 // == Composant
-const Pseudo = (props) => (
+const Pseudo = (props) => {
+
+    const { getPseudo, pseudo } = props;
+
+    const handlePseudo = (event) => {
+
+        const pseudo = event.target.value;
+        getPseudo(pseudo);
+
+        
+    }
     
+    return (
         <div className="pseudo">
             <input 
             type="text" 
             name="pseudo" 
             placeholder="Pseudo" 
+            value={pseudo} 
             required
-            value={props.pseudo} 
-            onChange={() => props.getPseudo(event.target.value)}
+            onChange={handlePseudo}
             />
             <label htmlFor="pseudo">Pseudo</label>
         </div>
-);
+)};
 
 // == Export
 export default Pseudo;

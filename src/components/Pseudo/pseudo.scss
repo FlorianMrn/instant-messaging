@@ -49,6 +49,11 @@
                 background-color: #fff;
             }
 
+            &:invalid {
+                border: red 3px solid;
+                background-color: #fff;
+            }
+
     }
 }
 
