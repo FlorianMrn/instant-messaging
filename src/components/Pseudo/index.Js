@@ -12,9 +12,11 @@ const Pseudo = (props) => (
             type="text" 
             name="pseudo" 
             placeholder="Pseudo" 
+            required
             value={props.pseudo} 
             onChange={() => props.getPseudo(event.target.value)}
             />
+            <label for="pseudo">Pseudo</label>
         </div>
 );
 

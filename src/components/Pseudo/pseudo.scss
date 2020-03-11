@@ -2,20 +2,52 @@
     position: absolute;
     right: 0;
     top: 0;
+    
+
+    & label {
+        position: absolute;
+        font-size: 0.7rem;
+        background: white;
+        border-right: 2px solid #147efb;
+        border-left: 2px solid #147efb;
+        left: 1.3rem;
+        padding: 3px;
+        z-index: 1;
+        top: -0.5rem;
+        font-weight: bold;
+        transition: all 0.1s;
+        border-radius: 5px;
+    }
 
     & input {
         width: 90%;
         height: 100%;
         box-sizing: border-box;
         border: 1px solid grey;
-        border-radius: 5px;
+        border-radius: 3px;
         padding: 5px;
         color: black;
         background-color: #DCDCDC;
+        text-align: center;
 
             &::placeholder {
                 color: grey;
             }
+
+            &:placeholder-shown + label {
+                opacity:0;
+                transform: translateY(150%);
+              }
+
+            :placeholder-shown {
+                z-index: 1;
+            }
+
+            &:valid {
+                border: #147efb 3px solid;
+                background-color: #fff;
+            }
+
     }
 }
 

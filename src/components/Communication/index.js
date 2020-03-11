@@ -13,7 +13,7 @@ const Communication = (props) => {
         <div className="communication">
                 {messages.map((message) => (
                         <div className="communication-myMess" key={message.id}> 
-                                <div className="communication-myMess-title">Jean</div>
+                                <div className="communication-myMess-title">{message.pseudo ? message.pseudo : "Anonyme"}</div>
                                 <p className="communication-myMess-mess">{message.text}</p>
                         </div>
 
