@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 import Thread from 'src/components/Thread';
 
 // Action Creators
-import { getMessageValue } from 'src/store/reducer';
+import { getMessageValue, receiveMessage  } from 'src/store/reducer';
 
 /* === State (données) ===
  * - mapStateToProps retroune un objet de props pour le composant de présentation
@@ -16,6 +16,7 @@ import { getMessageValue } from 'src/store/reducer';
  */
 const mapStateToProps = (state, ownProps) => ({
   messageValue: state.messageValue,
+  pseudo: state.pseudo
 });
 
 /* === Actions ===
@@ -29,6 +30,10 @@ const mapDispatchToProps = (dispatch, ownProps) => ({
   getMessageValue: (message) => {
     dispatch(getMessageValue(message));
   },
+  receiveMessage: (message) => {
+    const action = receiveMessage(message);
+    dispatch(action);
+  }
 });
 
 // Container

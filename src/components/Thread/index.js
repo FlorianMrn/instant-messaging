@@ -11,12 +11,21 @@ import { FiArrowUp } from "react-icons/fi";
 // == Composant
 const Thread = (props) => {
 
-  const {messageValue, getMessageValue } = props;
+  const {messageValue, getMessageValue, pseudo, receiveMessage } = props;
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    const newMessage = {
+            text: messageValue,
+            pseudo: pseudo,
+    };
+    receiveMessage(newMessage);
+  }
 
   return (
     <div className="thread">
       <Communication/>
-      <div className="thread-texting">
+      <form className="thread-texting" onSubmit={handleSubmit}>
           <input 
           type="text" 
           name="message" 
@@ -24,8 +33,8 @@ const Thread = (props) => {
           value={messageValue} 
           onChange={() => getMessageValue(event.target.value)}
           />
-          <div className="thread-texting-send"><FiArrowUp/></div>
-      </div>
+          <button className="thread-texting-send"><FiArrowUp/></button>
+      </form>
     </div>
   )};
 
