@@ -15,7 +15,8 @@ import Communication from 'src/components/Communication';
  * Pas de data à transmettre ? const mapStateToProps = null;
  */
 const mapStateToProps = (state, ownProps) => ({
-  messages: state.messagesData,
+  messages: state.messages,
+  pseudo: state.pseudo,
 });
 
 /* === Actions ===

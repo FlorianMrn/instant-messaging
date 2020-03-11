@@ -5,7 +5,8 @@ import messagesData from "src/data/messages.js";
 export const initialState = {
   messagesData,
   messageValue : '',
-  pseudo : ''
+  pseudo : '',
+  messages : [],
 };
 
 // == Types
@@ -13,6 +14,7 @@ export const GET_PSEUDO = 'GET_PSEUDO';
 export const GET_MESSAGE_VALUE = 'GET_MESSAGE_VALUE';
 export const WEBSOCKET_CONNECT = 'WEBSOCKET_CONNECT';
 export const ADD_MESSAGE = 'ADD_MESSAGE';
+export const RECEIVE_MESSAGE = 'RECEIVE_MESSAGE';
 
 // == Reducer
 const reducer = (state = initialState, action = {}) => {
@@ -26,12 +28,22 @@ const reducer = (state = initialState, action = {}) => {
       return {
         ...state,
         messageValue: action.message,
-      }
+      };
     case ADD_MESSAGE:
       return {
         ...state,
         messageValue : '',
-      }
+      };
+    case RECEIVE_MESSAGE:
+      return {
+        ...state,
+    // on concerve les messages et on ajoute le nouveau
+        messages: [
+          ...state.messages,
+          action.message
+        ],
+      };
+      
     default:
       return state;
   }
@@ -50,6 +62,11 @@ export const getMessageValue = (message) => ({
 
 export const websocketConnect = () => ({
   type: WEBSOCKET_CONNECT,
+});
+
+export const receiveMessage = (message) => ({
+  type: RECEIVE_MESSAGE,
+  message,
 });
 
 
