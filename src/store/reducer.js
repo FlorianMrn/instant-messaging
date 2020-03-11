@@ -12,6 +12,7 @@ export const initialState = {
 export const GET_PSEUDO = 'GET_PSEUDO';
 export const GET_MESSAGE_VALUE = 'GET_MESSAGE_VALUE';
 export const WEBSOCKET_CONNECT = 'WEBSOCKET_CONNECT';
+export const ADD_MESSAGE = 'ADD_MESSAGE';
 
 // == Reducer
 const reducer = (state = initialState, action = {}) => {
@@ -25,6 +26,11 @@ const reducer = (state = initialState, action = {}) => {
       return {
         ...state,
         messageValue: action.message,
+      }
+    case ADD_MESSAGE:
+      return {
+        ...state,
+        messageValue : '',
       }
     default:
       return state;
@@ -45,6 +51,8 @@ export const getMessageValue = (message) => ({
 export const websocketConnect = () => ({
   type: WEBSOCKET_CONNECT,
 });
+
+
 
 
 // == Selectors
