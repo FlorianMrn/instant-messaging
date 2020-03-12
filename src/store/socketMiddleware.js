@@ -9,8 +9,6 @@ const socketMiddleware = (store) => (next) => (action) => {
         case WEBSOCKET_CONNECT:
             socket = window.io('http://localhost:3001');
             socket.on('send_message', (message) => {
-                // on récupère le message transmis par le back en paramètre, on peut contrôler dans la console
-                console.log(message);
                 // on veut que ce message finisse dans le state, on émet l'action de reception d'un message
                 store.dispatch(receiveMessage(message));
             });

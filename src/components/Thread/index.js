@@ -1,5 +1,5 @@
 // == Import : npm
-import React from 'react';
+import React, { useState } from 'react';
 
 // == Import : components
 import Communication from "src/containers/CommunicationContainer";
@@ -11,16 +11,26 @@ import { FiArrowUp } from "react-icons/fi";
 // == Composant
 const Thread = (props) => {
 
-  const {messageValue, getMessageValue, pseudo, sendMessage } = props;
+  // Destructuring
+  const {messageValue, getMessageValue, pseudo, sendMessage, setCompliant } = props;
 
+  // Functions
   const handleSubmit = (event) => {
     event.preventDefault();
-    sendMessage();
+  
+    if (pseudo.length < 15  &&  pseudo !== "") {
+      sendMessage();
+      setCompliant(true);
+    } else {
+      setCompliant(false);
+    }
+    
   }
 
   return (
+    <>
     <div className="thread">
-      <Communication/>
+      <Communication />
       <form className="thread-texting" onSubmit={handleSubmit}>
           <input 
           type="text" 
@@ -32,6 +42,9 @@ const Thread = (props) => {
           <button className="thread-texting-send"><FiArrowUp/></button>
       </form>
     </div>
+    
+    </>
+
   )};
 
 // == Export

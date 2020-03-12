@@ -1,5 +1,5 @@
 // == Import : npm
-import React from 'react';
+import React, { useState } from 'react';
 
 // == Import : local
 import './app.scss';
@@ -7,12 +7,19 @@ import Thread from "src/containers/MessageContainer.js";
 import Pseudo from "src/containers/PseudoContainer.js";
 
 // == Composant
-const App = () => (
-  <div id="app">
-    <Thread />
-    <Pseudo />
-  </div>
-);
+const App = () => {
+
+  // HOOKS
+  const [compliant, setCompliant] = useState(true);
+
+  return (
+    <div id="app">
+      <Thread setCompliant={setCompliant}/>
+      <Pseudo compliant={compliant} setCompliant={setCompliant}/>
+    </div>
+  )
+
+};
 
 // == Export
 export default App;

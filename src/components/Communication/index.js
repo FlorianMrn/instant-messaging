@@ -7,6 +7,7 @@ import './communication.scss';
 // == Composant
 const Communication = (props) => {
 
+        // Destructuring
         const { messages, pseudo } = props;
 
         return (
@@ -22,7 +23,7 @@ const Communication = (props) => {
                                 )
                         } else if(message.pseudo !== pseudo) {
                                 return (
-                                <div className="communication-theirMess" > 
+                                <div className="communication-theirMess" key={message.id}> 
                                         <div className="communication-theirMess-title">{message.pseudo ? message.pseudo : "Anonyme"}</div>
                                         <p className="communication-theirMess-mess">{message.text}</p>
                                 </div>
@@ -31,7 +32,7 @@ const Communication = (props) => {
                                 return;
                         }
                        
-                })}                
+                })}            
         </div>
 )};
 
